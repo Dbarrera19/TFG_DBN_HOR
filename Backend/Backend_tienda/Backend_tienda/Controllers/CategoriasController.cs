@@ -1,0 +1,222 @@
+using Backend_tienda.Data;
+using Backend_tienda.DTOs;
+using Backend_tienda.Models;
+using Backend_tienda.Utilities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace Backend_tienda.Controllers
+{
+    /// <summary>
+    /// Controlador para gestionar categorías de productos
+    /// Rutas: /api/categorias
+    /// </summary>
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CategoriasController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly ILogger<CategoriasController> _logger;
+
+        public CategoriasController(ApplicationDbContext context, ILogger<CategoriasController> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// Obtiene todas las categorías
+        /// GET: /api/categorias
+        /// </summary>
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<ApiResponse<IEnumerable<CategoriaDto>>>> ObtenerCategorias()
+        {
+            try
+            {
+                var categorias = await _context.Categorias.ToListAsync();
+
+                var categoriasDto = categorias.Select(c => new CategoriaDto
+                {
+                    Id = c.Id,
+                    Nombre = c.Nombre,
+                    Descripcion = c.Descripcion
+                }).ToList();
+
+                return Ok(ApiResponse<IEnumerable<CategoriaDto>>.SuccessResponse(
+                    categoriasDto, 
+                    $"Se encontraron {categoriasDto.Count()} categorías", 
+                    200));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener categorías: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, 
+                    ApiResponse<IEnumerable<CategoriaDto>>.ServerErrorResponse("Error al obtener las categorías"));
+            }
+        }
+
+        /// <summary>
+        /// Obtiene una categoría por su ID
+        /// GET: /api/categorias/{id}
+        /// </summary>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ApiResponse<CategoriaDto>>> ObtenerCategoria(int id)
+        {
+            try
+            {
+                var categoria = await _context.Categorias.FindAsync(id);
+
+                if (categoria == null)
+                    return NotFound(ApiResponse<CategoriaDto>.NotFoundResponse("Categoría no encontrada"));
+
+                var categoriaDto = new CategoriaDto
+                {
+                    Id = categoria.Id,
+                    Nombre = categoria.Nombre,
+                    Descripcion = categoria.Descripcion
+                };
+
+                return Ok(ApiResponse<CategoriaDto>.SuccessResponse(categoriaDto, "Categoría obtenida correctamente"));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener categoría: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<CategoriaDto>.ServerErrorResponse("Error al obtener la categoría"));
+            }
+        }
+
+        /// <summary>
+        /// Crea una nueva categoría
+        /// POST: /api/categorias
+        /// </summary>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<ApiResponse<CategoriaDto>>> CrearCategoria(CrearActualizarCategoriaDto dto)
+        {
+            try
+            {
+                // Validar datos
+                if (string.IsNullOrWhiteSpace(dto.Nombre))
+                {
+                    var errores = new List<string> { "El nombre de la categoría es requerido" };
+                    return BadRequest(ApiResponse<CategoriaDto>.ErrorResponse(
+                        "Datos inválidos", errores, 400));
+                }
+
+                var categoria = new Categoria
+                {
+                    Nombre = dto.Nombre,
+                    Descripcion = dto.Descripcion
+                };
+
+                _context.Categorias.Add(categoria);
+                await _context.SaveChangesAsync();
+
+                var categoriaDto = new CategoriaDto
+                {
+                    Id = categoria.Id,
+                    Nombre = categoria.Nombre,
+                    Descripcion = categoria.Descripcion
+                };
+
+                return CreatedAtAction(nameof(ObtenerCategoria), 
+                    new { id = categoria.Id }, 
+                    ApiResponse<CategoriaDto>.SuccessResponse(categoriaDto, "Categoría creada correctamente", 201));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al crear categoría: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<CategoriaDto>.ServerErrorResponse("Error al crear la categoría"));
+            }
+        }
+
+        /// <summary>
+        /// Actualiza una categoría existente
+        /// PUT: /api/categorias/{id}
+        /// </summary>
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<ApiResponse<CategoriaDto>>> ActualizarCategoria(int id, CrearActualizarCategoriaDto dto)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(dto.Nombre))
+                {
+                    var errores = new List<string> { "El nombre de la categoría es requerido" };
+                    return BadRequest(ApiResponse<CategoriaDto>.ErrorResponse(
+                        "Datos inválidos", errores, 400));
+                }
+
+                var categoria = await _context.Categorias.FindAsync(id);
+
+                if (categoria == null)
+                    return NotFound(ApiResponse<CategoriaDto>.NotFoundResponse("Categoría no encontrada"));
+
+                categoria.Nombre = dto.Nombre;
+                categoria.Descripcion = dto.Descripcion;
+
+                _context.Categorias.Update(categoria);
+                await _context.SaveChangesAsync();
+
+                var categoriaDto = new CategoriaDto
+                {
+                    Id = categoria.Id,
+                    Nombre = categoria.Nombre,
+                    Descripcion = categoria.Descripcion
+                };
+
+                return Ok(ApiResponse<CategoriaDto>.SuccessResponse(categoriaDto, "Categoría actualizada correctamente"));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al actualizar categoría: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<CategoriaDto>.ServerErrorResponse("Error al actualizar la categoría"));
+            }
+        }
+
+        /// <summary>
+        /// Elimina una categoría
+        /// DELETE: /api/categorias/{id}
+        /// </summary>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ApiResponse<string>>> EliminarCategoria(int id)
+        {
+            try
+            {
+                var categoria = await _context.Categorias.FindAsync(id);
+
+                if (categoria == null)
+                    return NotFound(ApiResponse<string>.NotFoundResponse("Categoría no encontrada"));
+
+                _context.Categorias.Remove(categoria);
+                await _context.SaveChangesAsync();
+
+                return Ok(ApiResponse<string>.SuccessResponse(null, "Categoría eliminada correctamente"));
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError($"Error al eliminar categoría (existe en productos): {ex.Message}");
+                var errores = new List<string> { "No se puede eliminar la categoría porque tiene productos asociados" };
+                return StatusCode(StatusCodes.Status400BadRequest,
+                    ApiResponse<string>.ErrorResponse("Error al eliminar", errores, 400));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al eliminar categoría: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<string>.ServerErrorResponse("Error al eliminar la categoría"));
+            }
+        }
+    }
+}

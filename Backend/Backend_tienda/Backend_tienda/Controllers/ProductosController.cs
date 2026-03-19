@@ -1,0 +1,293 @@
+using Backend_tienda.Data;
+using Backend_tienda.DTOs;
+using Backend_tienda.Models;
+using Backend_tienda.Utilities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace Backend_tienda.Controllers
+{
+    /// <summary>
+    /// Controlador para gestionar productos
+    /// Rutas: /api/productos
+    /// </summary>
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProductosController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly ILogger<ProductosController> _logger;
+
+        public ProductosController(ApplicationDbContext context, ILogger<ProductosController> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// Obtiene todos los productos
+        /// GET: /api/productos
+        /// </summary>
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<ApiResponse<IEnumerable<ProductoDto>>>> ObtenerProductos()
+        {
+            try
+            {
+                var productos = await _context.Productos
+                    .Include(p => p.Categoria)
+                    .ToListAsync();
+
+                var productosDto = productos.Select(p => new ProductoDto
+                {
+                    Id = p.Id,
+                    Nombre = p.Nombre,
+                    Descripcion = p.Descripcion,
+                    Precio = p.Precio,
+                    Stock = p.Stock,
+                    Marca = p.Marca,
+                    Talla = p.Talla,
+                    CategoriaId = p.CategoriaId,
+                    CategoriaNombre = p.Categoria?.Nombre
+                }).ToList();
+
+                return Ok(ApiResponse<IEnumerable<ProductoDto>>.SuccessResponse(
+                    productosDto, 
+                    $"Se encontraron {productosDto.Count()} productos", 
+                    200));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener productos: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<IEnumerable<ProductoDto>>.ServerErrorResponse("Error al obtener los productos"));
+            }
+        }
+
+        /// <summary>
+        /// Obtiene un producto por su ID
+        /// GET: /api/productos/{id}
+        /// </summary>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ApiResponse<ProductoDto>>> ObtenerProducto(int id)
+        {
+            try
+            {
+                var producto = await _context.Productos
+                    .Include(p => p.Categoria)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (producto == null)
+                    return NotFound(ApiResponse<ProductoDto>.NotFoundResponse("Producto no encontrado"));
+
+                var productoDto = new ProductoDto
+                {
+                    Id = producto.Id,
+                    Nombre = producto.Nombre,
+                    Descripcion = producto.Descripcion,
+                    Precio = producto.Precio,
+                    Stock = producto.Stock,
+                    Marca = producto.Marca,
+                    Talla = producto.Talla,
+                    CategoriaId = producto.CategoriaId,
+                    CategoriaNombre = producto.Categoria?.Nombre
+                };
+
+                return Ok(ApiResponse<ProductoDto>.SuccessResponse(productoDto, "Producto obtenido correctamente"));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener producto: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<ProductoDto>.ServerErrorResponse("Error al obtener el producto"));
+            }
+        }
+
+        /// <summary>
+        /// Crea un nuevo producto
+        /// POST: /api/productos
+        /// </summary>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<ApiResponse<ProductoDto>>> CrearProducto(CrearActualizarProductoDto dto)
+        {
+            try
+            {
+                var errores = new List<string>();
+
+                // Validar datos
+                if (string.IsNullOrWhiteSpace(dto.Nombre))
+                    errores.Add("El nombre del producto es requerido");
+
+                if (dto.Precio <= 0)
+                    errores.Add("El precio debe ser mayor a 0");
+
+                if (dto.Stock < 0)
+                    errores.Add("El stock no puede ser negativo");
+
+                if (errores.Count > 0)
+                    return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Datos inválidos", errores, 400));
+
+                // Verificar que la categoría existe
+                var categoriaExiste = await _context.Categorias.AnyAsync(c => c.Id == dto.CategoriaId);
+                if (!categoriaExiste)
+                {
+                    errores.Add("La categoría especificada no existe");
+                    return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Categoría no válida", errores, 400));
+                }
+
+                var producto = new Producto
+                {
+                    Nombre = dto.Nombre,
+                    Descripcion = dto.Descripcion,
+                    Precio = dto.Precio,
+                    Stock = dto.Stock,
+                    Marca = dto.Marca,
+                    Talla = dto.Talla,
+                    CategoriaId = dto.CategoriaId
+                };
+
+                _context.Productos.Add(producto);
+                await _context.SaveChangesAsync();
+
+                var categoria = await _context.Categorias.FindAsync(dto.CategoriaId);
+
+                var productoDto = new ProductoDto
+                {
+                    Id = producto.Id,
+                    Nombre = producto.Nombre,
+                    Descripcion = producto.Descripcion,
+                    Precio = producto.Precio,
+                    Stock = producto.Stock,
+                    Marca = producto.Marca,
+                    Talla = producto.Talla,
+                    CategoriaId = producto.CategoriaId,
+                    CategoriaNombre = categoria?.Nombre
+                };
+
+                return CreatedAtAction(nameof(ObtenerProducto),
+                    new { id = producto.Id }, 
+                    ApiResponse<ProductoDto>.SuccessResponse(productoDto, "Producto creado correctamente", 201));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al crear producto: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<ProductoDto>.ServerErrorResponse("Error al crear el producto"));
+            }
+        }
+
+        /// <summary>
+        /// Actualiza un producto existente
+        /// PUT: /api/productos/{id}
+        /// </summary>
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<ApiResponse<ProductoDto>>> ActualizarProducto(int id, CrearActualizarProductoDto dto)
+        {
+            try
+            {
+                var errores = new List<string>();
+
+                if (string.IsNullOrWhiteSpace(dto.Nombre))
+                    errores.Add("El nombre del producto es requerido");
+
+                if (dto.Precio <= 0)
+                    errores.Add("El precio debe ser mayor a 0");
+
+                if (dto.Stock < 0)
+                    errores.Add("El stock no puede ser negativo");
+
+                if (errores.Count > 0)
+                    return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Datos inválidos", errores, 400));
+
+                var producto = await _context.Productos.FindAsync(id);
+
+                if (producto == null)
+                    return NotFound(ApiResponse<ProductoDto>.NotFoundResponse("Producto no encontrado"));
+
+                var categoriaExiste = await _context.Categorias.AnyAsync(c => c.Id == dto.CategoriaId);
+                if (!categoriaExiste)
+                {
+                    errores.Add("La categoría especificada no existe");
+                    return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Categoría no válida", errores, 400));
+                }
+
+                producto.Nombre = dto.Nombre;
+                producto.Descripcion = dto.Descripcion;
+                producto.Precio = dto.Precio;
+                producto.Stock = dto.Stock;
+                producto.Marca = dto.Marca;
+                producto.Talla = dto.Talla;
+                producto.CategoriaId = dto.CategoriaId;
+
+                _context.Productos.Update(producto);
+                await _context.SaveChangesAsync();
+
+                var categoria = await _context.Categorias.FindAsync(dto.CategoriaId);
+
+                var productoDto = new ProductoDto
+                {
+                    Id = producto.Id,
+                    Nombre = producto.Nombre,
+                    Descripcion = producto.Descripcion,
+                    Precio = producto.Precio,
+                    Stock = producto.Stock,
+                    Marca = producto.Marca,
+                    Talla = producto.Talla,
+                    CategoriaId = producto.CategoriaId,
+                    CategoriaNombre = categoria?.Nombre
+                };
+
+                return Ok(ApiResponse<ProductoDto>.SuccessResponse(productoDto, "Producto actualizado correctamente"));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al actualizar producto: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<ProductoDto>.ServerErrorResponse("Error al actualizar el producto"));
+            }
+        }
+
+        /// <summary>
+        /// Elimina un producto
+        /// DELETE: /api/productos/{id}
+        /// </summary>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ApiResponse<string>>> EliminarProducto(int id)
+        {
+            try
+            {
+                var producto = await _context.Productos.FindAsync(id);
+
+                if (producto == null)
+                    return NotFound(ApiResponse<string>.NotFoundResponse("Producto no encontrado"));
+
+                _context.Productos.Remove(producto);
+                await _context.SaveChangesAsync();
+
+                return Ok(ApiResponse<string>.SuccessResponse(null, "Producto eliminado correctamente"));
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError($"Error al eliminar producto (existe en pedidos): {ex.Message}");
+                var errores = new List<string> { "No se puede eliminar el producto porque está en detalles de pedidos" };
+                return StatusCode(StatusCodes.Status400BadRequest,
+                    ApiResponse<string>.ErrorResponse("Error al eliminar", errores, 400));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al eliminar producto: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<string>.ServerErrorResponse("Error al eliminar el producto"));
+            }
+        }
+    }
+}

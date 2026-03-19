@@ -1,0 +1,104 @@
+﻿using Backend_tienda.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Backend_tienda.Data
+{
+    /// <summary>
+    /// Contexto de base de datos para la tienda "El Reino del Fútbol"
+    /// Administra la comunicación entre la aplicación y MySQL
+    /// </summary>
+    public class ApplicationDbContext : DbContext
+    {
+        /// <summary>
+        /// Constructor que recibe las opciones de configuración
+        /// </summary>
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 
+            : base(options)
+        {
+        }
+
+        /// <summary>
+        /// DbSet para la entidad Categoría
+        /// Representa la tabla Categorias en la base de datos
+        /// </summary>
+        public DbSet<Categoria> Categorias { get; set; }
+
+        /// <summary>
+        /// DbSet para la entidad Producto
+        /// Representa la tabla Productos en la base de datos
+        /// </summary>
+        public DbSet<Producto> Productos { get; set; }
+
+        /// <summary>
+        /// DbSet para la entidad Cliente
+        /// Representa la tabla Clientes en la base de datos
+        /// </summary>
+        public DbSet<Cliente> Clientes { get; set; }
+
+        /// <summary>
+        /// DbSet para la entidad Pedido
+        /// Representa la tabla Pedidos en la base de datos
+        /// </summary>
+        public DbSet<Pedido> Pedidos { get; set; }
+
+        /// <summary>
+        /// DbSet para la entidad DetallePedido
+        /// Representa la tabla DetallePedido en la base de datos
+        /// </summary>
+        public DbSet<DetallePedido> DetallesPedidos { get; set; }
+
+        /// <summary>
+        /// Configura las relaciones y restricciones de las entidades
+        /// </summary>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configuración de la relación Categoria - Producto
+            modelBuilder.Entity<Producto>()
+                .HasOne(p => p.Categoria)
+                .WithMany(c => c.Productos)
+                .HasForeignKey(p => p.CategoriaId)
+                .OnDelete(DeleteBehavior.Restrict); // No permite eliminar una categoría si tiene productos
+
+            // Configuración de la relación Cliente - Pedido
+            modelBuilder.Entity<Pedido>()
+                .HasOne(p => p.Cliente)
+                .WithMany(c => c.Pedidos)
+                .HasForeignKey(p => p.ClienteId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Configuración de la relación Pedido - DetallePedido
+            modelBuilder.Entity<DetallePedido>()
+                .HasOne(dp => dp.Pedido)
+                .WithMany(p => p.Detalles)
+                .HasForeignKey(dp => dp.PedidoId)
+                .OnDelete(DeleteBehavior.Cascade); // Elimina detalles cuando se elimina un pedido
+
+            // Configuración de la relación Producto - DetallePedido
+            modelBuilder.Entity<DetallePedido>()
+                .HasOne(dp => dp.Producto)
+                .WithMany(p => p.DetallePedidos)
+                .HasForeignKey(dp => dp.ProductoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Configuración de propiedades de precisión para dinero
+            // MySQL: DECIMAL(10,2) como en el script original
+            modelBuilder.Entity<Producto>()
+                .Property(p => p.Precio)
+                .HasColumnType("decimal(10,2)");
+
+            modelBuilder.Entity<Pedido>()
+                .Property(p => p.Total)
+                .HasColumnType("decimal(10,2)");
+
+            modelBuilder.Entity<DetallePedido>()
+                .Property(d => d.PrecioUnitario)
+                .HasColumnType("decimal(10,2)");
+
+            modelBuilder.Entity<DetallePedido>()
+                .Property(d => d.Subtotal)
+                .HasColumnType("decimal(10,2)");
+        }
+    }
+}

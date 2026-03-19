@@ -1,0 +1,105 @@
+/* Estilos para filtros */
+
+.filters {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.filters h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm);
+}
+
+.filter-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-dark);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.1);
+}
+
+.category-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: var(--font-size-sm);
+}
+
+.category-btn:hover {
+  border-color: var(--primary-color);
+  background-color: var(--light-bg);
+}
+
+.category-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.btn-reset {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-reset:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.loading,
+.error {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.error {
+  background-color: rgba(248, 81, 73, 0.1);
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .filters {
+    position: static;
+    margin-bottom: var(--spacing-md);
+  }
+}

@@ -1,0 +1,91 @@
+﻿using Backend_tienda.Data;
+using Backend_tienda.Configuration;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ===================== SERVICIOS =====================
+
+// Agregar Entity Framework Core con MySQL
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+// Agregar controladores (API REST)
+builder.Services.AddControllers();
+
+// Agregar Swagger para documentación de la API
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerDocumentation();
+
+// Agregar soporte para CORS (permite que frontend acceda a la API)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
+// ===================== CONSTRUCCIÓN DE LA APLICACIÓN =====================
+
+var app = builder.Build();
+
+// Aplicar migraciones automáticamente (opcional, útil en desarrollo)
+using (var scope = app.Services.CreateScope())
+{
+    try
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        dbContext.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+        logger.LogError($"Error al aplicar migraciones: {ex.Message}");
+    }
+}
+
+// ===================== CONFIGURACIÓN DEL PIPELINE =====================
+
+// Usar Swagger siempre (incluso en producción para este proyecto académico)
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API El Reino del Fútbol v1");
+    c.RoutePrefix = "swagger"; // Accesible en /swagger
+});
+
+// Redirigir HTTP a HTTPS
+app.UseHttpsRedirection();
+
+// Usar autorización
+app.UseAuthorization();
+
+// Usar CORS
+app.UseCors("AllowAll");
+
+// Endpoint raíz: redirige a Swagger
+app.MapGet("/", () => Results.Redirect("/swagger", permanent: false))
+    .WithName("Root")
+    .WithOpenApi();
+
+// Endpoint de estado: verifica si la API está funcionando
+app.MapGet("/api/status", () => new 
+{ 
+    message = "✅ API El Reino del Fútbol está funcionando",
+    version = "1.0.0",
+    environment = app.Environment.EnvironmentName,
+    timestamp = DateTime.UtcNow
+})
+    .WithName("Status")
+    .WithOpenApi();
+
+// Mapear controladores
+app.MapControllers();
+
+// ===================== EJECUTAR LA APLICACIÓN =====================
+
+app.Run();

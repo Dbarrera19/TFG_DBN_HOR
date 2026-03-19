@@ -1,0 +1,85 @@
+/* Estilos para agregar al carrito */
+
+.add-to-cart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--light-bg);
+  border-radius: var(--radius-lg);
+}
+
+.quantity-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.quantity-selector label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: white;
+}
+
+.quantity-input button {
+  background: none;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: background-color var(--transition);
+}
+
+.quantity-input button:hover:not(:disabled) {
+  background-color: var(--light-bg);
+}
+
+.quantity-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-input input {
+  border: none;
+  width: 60px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.quantity-input input:focus {
+  outline: none;
+}
+
+.btn-add {
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: all var(--transition);
+}
+
+.btn-add:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-add.success {
+  background-color: var(--success);
+}
+
+.stock-warning {
+  color: var(--warning-text);
+  background-color: var(--warning);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}

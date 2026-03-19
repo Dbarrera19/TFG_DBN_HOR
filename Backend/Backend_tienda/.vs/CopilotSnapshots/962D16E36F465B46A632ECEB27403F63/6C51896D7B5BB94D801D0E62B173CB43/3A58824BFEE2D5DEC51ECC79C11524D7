@@ -1,0 +1,318 @@
+﻿using Backend_tienda.Data;
+using Backend_tienda.DTOs;
+using Backend_tienda.Models;
+using Backend_tienda.Utilities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace Backend_tienda.Controllers
+{
+    /// <summary>
+    /// Controlador para gestionar pedidos
+    /// Rutas: /api/pedidos
+    /// </summary>
+    [ApiController]
+    [Route("api/[controller]")]
+    public class PedidosController : ControllerBase
+    {
+        private readonly ApplicationDbContext _context;
+        private readonly ILogger<PedidosController> _logger;
+
+        public PedidosController(ApplicationDbContext context, ILogger<PedidosController> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// Obtiene todos los pedidos
+        /// GET: /api/pedidos
+        /// </summary>
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<ApiResponse<IEnumerable<PedidoDto>>>> ObtenerPedidos()
+        {
+            try
+            {
+                var pedidos = await _context.Pedidos
+                    .Include(p => p.Cliente)
+                    .Include(p => p.Detalles)
+                    .ThenInclude(d => d.Producto)
+                    .ToListAsync();
+
+                var pedidosDto = pedidos.Select(p => new PedidoDto
+                {
+                    Id = p.Id,
+                    Fecha = p.Fecha,
+                    ClienteId = p.ClienteId,
+                    NombreCliente = p.Cliente != null ? $"{p.Cliente.Nombre} {p.Cliente.Apellido}" : "",
+                    Total = p.Total,
+                    Detalles = p.Detalles.Select(d => new DetallePedidoDto
+                    {
+                        Id = d.Id,
+                        PedidoId = d.PedidoId,
+                        ProductoId = d.ProductoId,
+                        NombreProducto = d.Producto?.Nombre,
+                        Cantidad = d.Cantidad,
+                        PrecioUnitario = d.PrecioUnitario,
+                        Subtotal = d.Subtotal
+                    }).ToList()
+                }).ToList();
+
+                return Ok(ApiResponse<IEnumerable<PedidoDto>>.SuccessResponse(
+                    pedidosDto,
+                    $"Se encontraron {pedidosDto.Count()} pedidos",
+                    200));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener pedidos: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    ApiResponse<IEnumerable<PedidoDto>>.ServerErrorResponse("Error al obtener los pedidos"));
+            }
+        }
+
+        /// <summary>
+        /// Obtiene un pedido por su ID
+        /// GET: /api/pedidos/{id}
+        /// </summary>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<PedidoDto>> ObtenerPedido(int id)
+        {
+            try
+            {
+                var pedido = await _context.Pedidos
+                    .Include(p => p.Cliente)
+                    .Include(p => p.Detalles)
+                    .ThenInclude(d => d.Producto)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (pedido == null)
+                    return NotFound(new { mensaje = "Pedido no encontrado" });
+
+                var pedidoDto = new PedidoDto
+                {
+                    Id = pedido.Id,
+                    Fecha = pedido.Fecha,
+                    ClienteId = pedido.ClienteId,
+                    NombreCliente = pedido.Cliente != null ? $"{pedido.Cliente.Nombre} {pedido.Cliente.Apellido}" : "",
+                    Total = pedido.Total,
+                    Detalles = pedido.Detalles.Select(d => new DetallePedidoDto
+                    {
+                        Id = d.Id,
+                        PedidoId = d.PedidoId,
+                        ProductoId = d.ProductoId,
+                        NombreProducto = d.Producto?.Nombre,
+                        Cantidad = d.Cantidad,
+                        PrecioUnitario = d.PrecioUnitario,
+                        Subtotal = d.Subtotal
+                    }).ToList()
+                };
+
+                return Ok(pedidoDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener pedido: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { mensaje = "Error al obtener el pedido" });
+            }
+        }
+
+        /// <summary>
+        /// Crea un nuevo pedido con detalles
+        /// POST: /api/pedidos
+        /// </summary>
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<PedidoDto>> CrearPedido(CrearPedidoDto dto)
+        {
+            try
+            {
+                // Validar cliente
+                var clienteExiste = await _context.Clientes.AnyAsync(c => c.Id == dto.ClienteId);
+                if (!clienteExiste)
+                    return BadRequest(new { mensaje = "El cliente especificado no existe" });
+
+                // Validar detalles
+                if (dto.Detalles == null || dto.Detalles.Count == 0)
+                    return BadRequest(new { mensaje = "El pedido debe tener al menos un producto" });
+
+                var pedido = new Pedido
+                {
+                    Fecha = DateTime.Now,
+                    ClienteId = dto.ClienteId,
+                    Total = 0
+                };
+
+                decimal totalPedido = 0;
+
+                // Crear detalles del pedido
+                foreach (var detalle in dto.Detalles)
+                {
+                    var producto = await _context.Productos.FindAsync(detalle.ProductoId);
+
+                    if (producto == null)
+                        return BadRequest(new { mensaje = $"El producto con ID {detalle.ProductoId} no existe" });
+
+                    if (detalle.Cantidad <= 0)
+                        return BadRequest(new { mensaje = "La cantidad debe ser mayor a 0" });
+
+                    if (producto.Stock < detalle.Cantidad)
+                        return BadRequest(new { mensaje = $"Stock insuficiente para el producto {producto.Nombre}" });
+
+                    // Crear detalle
+                    var detallePedido = new DetallePedido
+                    {
+                        ProductoId = detalle.ProductoId,
+                        Cantidad = detalle.Cantidad,
+                        PrecioUnitario = producto.Precio,
+                        Subtotal = detalle.Cantidad * producto.Precio
+                    };
+
+                    pedido.Detalles.Add(detallePedido);
+                    totalPedido += detallePedido.Subtotal;
+
+                    // Reducir stock
+                    producto.Stock -= detalle.Cantidad;
+                }
+
+                pedido.Total = totalPedido;
+
+                _context.Pedidos.Add(pedido);
+                await _context.SaveChangesAsync();
+
+                var cliente = await _context.Clientes.FindAsync(dto.ClienteId);
+
+                var pedidoDto = new PedidoDto
+                {
+                    Id = pedido.Id,
+                    Fecha = pedido.Fecha,
+                    ClienteId = pedido.ClienteId,
+                    NombreCliente = cliente != null ? $"{cliente.Nombre} {cliente.Apellido}" : "",
+                    Total = pedido.Total,
+                    Detalles = pedido.Detalles.Select(d => new DetallePedidoDto
+                    {
+                        Id = d.Id,
+                        PedidoId = d.PedidoId,
+                        ProductoId = d.ProductoId,
+                        Cantidad = d.Cantidad,
+                        PrecioUnitario = d.PrecioUnitario,
+                        Subtotal = d.Subtotal
+                    }).ToList()
+                };
+
+                return CreatedAtAction(nameof(ObtenerPedido),
+                    new { id = pedido.Id }, pedidoDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al crear pedido: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { mensaje = "Error al crear el pedido" });
+            }
+        }
+
+        /// <summary>
+        /// Actualiza el cliente de un pedido
+        /// PUT: /api/pedidos/{id}
+        /// </summary>
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<PedidoDto>> ActualizarPedido(int id, ActualizarPedidoDto dto)
+        {
+            try
+            {
+                var pedido = await _context.Pedidos
+                    .Include(p => p.Detalles)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (pedido == null)
+                    return NotFound(new { mensaje = "Pedido no encontrado" });
+
+                var clienteExiste = await _context.Clientes.AnyAsync(c => c.Id == dto.ClienteId);
+                if (!clienteExiste)
+                    return BadRequest(new { mensaje = "El cliente especificado no existe" });
+
+                pedido.ClienteId = dto.ClienteId;
+
+                _context.Pedidos.Update(pedido);
+                await _context.SaveChangesAsync();
+
+                var cliente = await _context.Clientes.FindAsync(dto.ClienteId);
+
+                var pedidoDto = new PedidoDto
+                {
+                    Id = pedido.Id,
+                    Fecha = pedido.Fecha,
+                    ClienteId = pedido.ClienteId,
+                    NombreCliente = cliente != null ? $"{cliente.Nombre} {cliente.Apellido}" : "",
+                    Total = pedido.Total,
+                    Detalles = pedido.Detalles.Select(d => new DetallePedidoDto
+                    {
+                        Id = d.Id,
+                        PedidoId = d.PedidoId,
+                        ProductoId = d.ProductoId,
+                        Cantidad = d.Cantidad,
+                        PrecioUnitario = d.PrecioUnitario,
+                        Subtotal = d.Subtotal
+                    }).ToList()
+                };
+
+                return Ok(pedidoDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al actualizar pedido: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { mensaje = "Error al actualizar el pedido" });
+            }
+        }
+
+        /// <summary>
+        /// Elimina un pedido y restaura el stock de los productos
+        /// DELETE: /api/pedidos/{id}
+        /// </summary>
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> EliminarPedido(int id)
+        {
+            try
+            {
+                var pedido = await _context.Pedidos
+                    .Include(p => p.Detalles)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (pedido == null)
+                    return NotFound(new { mensaje = "Pedido no encontrado" });
+
+                // Restaurar stock de los productos
+                foreach (var detalle in pedido.Detalles)
+                {
+                    var producto = await _context.Productos.FindAsync(detalle.ProductoId);
+                    if (producto != null)
+                    {
+                        producto.Stock += detalle.Cantidad;
+                    }
+                }
+
+                _context.Pedidos.Remove(pedido);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { mensaje = "Pedido eliminado correctamente" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al eliminar pedido: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { mensaje = "Error al eliminar el pedido" });
+            }
+        }
+    }
+}

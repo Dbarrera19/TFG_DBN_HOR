@@ -1,0 +1,529 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend_tienda</name>
+    </assembly>
+    <members>
+        <member name="T:Backend_tienda.Configuration.SwaggerConfiguration">
+            <summary>
+            Configuración de Swagger/OpenAPI para la documentación de la API
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Configuration.SwaggerConfiguration.AddSwaggerDocumentation(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configura Swagger con información detallada de la API
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Controllers.CategoriasController">
+            <summary>
+            Controlador para gestionar categorías de productos
+            Rutas: /api/categorias
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.CategoriasController.ObtenerCategorias">
+            <summary>
+            Obtiene todas las categorías
+            GET: /api/categorias
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.CategoriasController.ObtenerCategoria(System.Int32)">
+            <summary>
+            Obtiene una categoría por su ID
+            GET: /api/categorias/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.CategoriasController.CrearCategoria(Backend_tienda.DTOs.CrearActualizarCategoriaDto)">
+            <summary>
+            Crea una nueva categoría
+            POST: /api/categorias
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.CategoriasController.ActualizarCategoria(System.Int32,Backend_tienda.DTOs.CrearActualizarCategoriaDto)">
+            <summary>
+            Actualiza una categoría existente
+            PUT: /api/categorias/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.CategoriasController.EliminarCategoria(System.Int32)">
+            <summary>
+            Elimina una categoría
+            DELETE: /api/categorias/{id}
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Controllers.ClientesController">
+            <summary>
+            Controlador para gestionar clientes
+            Rutas: /api/clientes
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ClientesController.ObtenerClientes">
+            <summary>
+            Obtiene todos los clientes
+            GET: /api/clientes
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ClientesController.ObtenerCliente(System.Int32)">
+            <summary>
+            Obtiene un cliente por su ID
+            GET: /api/clientes/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ClientesController.CrearCliente(Backend_tienda.DTOs.CrearActualizarClienteDto)">
+            <summary>
+            Crea un nuevo cliente
+            POST: /api/clientes
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ClientesController.ActualizarCliente(System.Int32,Backend_tienda.DTOs.CrearActualizarClienteDto)">
+            <summary>
+            Actualiza un cliente existente
+            PUT: /api/clientes/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ClientesController.EliminarCliente(System.Int32)">
+            <summary>
+            Elimina un cliente
+            DELETE: /api/clientes/{id}
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Controllers.DetallepedidosController">
+            <summary>
+            Controlador para gestionar detalles de pedidos
+            Rutas: /api/detallepedidos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.DetallepedidosController.ObtenerDetalles">
+            <summary>
+            Obtiene todos los detalles de pedidos
+            GET: /api/detallepedidos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.DetallepedidosController.ObtenerDetallesPorPedido(System.Int32)">
+            <summary>
+            Obtiene detalles de un pedido específico
+            GET: /api/detallepedidos/porpedido/{pedidoId}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.DetallepedidosController.ObtenerDetalle(System.Int32)">
+            <summary>
+            Obtiene un detalle de pedido por su ID
+            GET: /api/detallepedidos/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.DetallepedidosController.ActualizarDetalle(System.Int32,Backend_tienda.DTOs.CrearDetallePedidoDto)">
+            <summary>
+            Nota: Los detalles de pedidos se crean directamente al crear un pedido
+            Este endpoint es para actualizar la cantidad de un detalle específico
+            PUT: /api/detallepedidos/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.DetallepedidosController.EliminarDetalle(System.Int32)">
+            <summary>
+            Elimina un detalle de pedido
+            DELETE: /api/detallepedidos/{id}
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Controllers.PedidosController">
+            <summary>
+            Controlador para gestionar pedidos
+            Rutas: /api/pedidos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.PedidosController.ObtenerPedidos">
+            <summary>
+            Obtiene todos los pedidos
+            GET: /api/pedidos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.PedidosController.ObtenerPedido(System.Int32)">
+            <summary>
+            Obtiene un pedido por su ID
+            GET: /api/pedidos/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.PedidosController.CrearPedido(Backend_tienda.DTOs.CrearPedidoDto)">
+            <summary>
+            Crea un nuevo pedido con detalles
+            POST: /api/pedidos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.PedidosController.ActualizarPedido(System.Int32,Backend_tienda.DTOs.ActualizarPedidoDto)">
+            <summary>
+            Actualiza el cliente de un pedido
+            PUT: /api/pedidos/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.PedidosController.EliminarPedido(System.Int32)">
+            <summary>
+            Elimina un pedido y restaura el stock de los productos
+            DELETE: /api/pedidos/{id}
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Controllers.ProductosController">
+            <summary>
+            Controlador para gestionar productos
+            Rutas: /api/productos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ProductosController.ObtenerProductos">
+            <summary>
+            Obtiene todos los productos
+            GET: /api/productos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ProductosController.ObtenerProducto(System.Int32)">
+            <summary>
+            Obtiene un producto por su ID
+            GET: /api/productos/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ProductosController.CrearProducto(Backend_tienda.DTOs.CrearActualizarProductoDto)">
+            <summary>
+            Crea un nuevo producto
+            POST: /api/productos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ProductosController.ActualizarProducto(System.Int32,Backend_tienda.DTOs.CrearActualizarProductoDto)">
+            <summary>
+            Actualiza un producto existente
+            PUT: /api/productos/{id}
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Controllers.ProductosController.EliminarProducto(System.Int32)">
+            <summary>
+            Elimina un producto
+            DELETE: /api/productos/{id}
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Data.ApplicationDbContext">
+            <summary>
+            Contexto de base de datos para la tienda "El Reino del Fútbol"
+            Administra la comunicación entre la aplicación y MySQL
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Backend_tienda.Data.ApplicationDbContext})">
+            <summary>
+            Constructor que recibe las opciones de configuración
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Data.ApplicationDbContext.Categorias">
+            <summary>
+            DbSet para la entidad Categoría
+            Representa la tabla Categorias en la base de datos
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Data.ApplicationDbContext.Productos">
+            <summary>
+            DbSet para la entidad Producto
+            Representa la tabla Productos en la base de datos
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Data.ApplicationDbContext.Clientes">
+            <summary>
+            DbSet para la entidad Cliente
+            Representa la tabla Clientes en la base de datos
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Data.ApplicationDbContext.Pedidos">
+            <summary>
+            DbSet para la entidad Pedido
+            Representa la tabla Pedidos en la base de datos
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Data.ApplicationDbContext.DetallesPedidos">
+            <summary>
+            DbSet para la entidad DetallePedido
+            Representa la tabla DetallePedido en la base de datos
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configura las relaciones y restricciones de las entidades
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.DTOs.CrearActualizarCategoriaDto">
+            <summary>
+            DTO para crear o actualizar una categoría
+            No incluye el Id ya que se genera automáticamente
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.DTOs.CategoriaDto">
+            <summary>
+            DTO para devolver datos de una categoría
+            Incluye todos los campos
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Models.Categoria">
+            <summary>
+            Representa una categoría de productos
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Categoria.Id">
+            <summary>
+            Identificador único de la categoría
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Categoria.Nombre">
+            <summary>
+            Nombre de la categoría (ej: Camisetas, Balones, etc.)
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Categoria.Descripcion">
+            <summary>
+            Descripción de la categoría
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Categoria.Productos">
+            <summary>
+            Relación: Una categoría puede tener muchos productos
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Models.Cliente">
+            <summary>
+            Representa un cliente de la tienda
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Id">
+            <summary>
+            Identificador único del cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Nombre">
+            <summary>
+            Nombre del cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Apellido">
+            <summary>
+            Apellido del cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Email">
+            <summary>
+            Correo electrónico del cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Telefono">
+            <summary>
+            Número de teléfono del cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Direccion">
+            <summary>
+            Dirección de envío del cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Cliente.Pedidos">
+            <summary>
+            Relación: Un cliente puede tener muchos pedidos
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Models.DetallePedido">
+            <summary>
+            Representa un producto dentro de un pedido
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.Id">
+            <summary>
+            Identificador único del detalle
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.PedidoId">
+            <summary>
+            Clave foránea: Referencia al pedido
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.Pedido">
+            <summary>
+            Relación: Referencia al pedido
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.ProductoId">
+            <summary>
+            Clave foránea: Referencia al producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.Producto">
+            <summary>
+            Relación: Referencia al producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.Cantidad">
+            <summary>
+            Cantidad de unidades del producto en este detalle
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.PrecioUnitario">
+            <summary>
+            Precio unitario del producto en el momento de la compra
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.DetallePedido.Subtotal">
+            <summary>
+            Subtotal del detalle (Cantidad × PrecioUnitario)
+            Se calcula automáticamente
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Models.Pedido">
+            <summary>
+            Representa un pedido realizado por un cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Pedido.Id">
+            <summary>
+            Identificador único del pedido
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Pedido.Fecha">
+            <summary>
+            Fecha en que se realizó el pedido
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Pedido.ClienteId">
+            <summary>
+            Clave foránea: Referencia al cliente
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Pedido.Cliente">
+            <summary>
+            Relación: Referencia al cliente que realizó el pedido
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Pedido.Total">
+            <summary>
+            Monto total del pedido (suma de subtotales)
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Pedido.Detalles">
+            <summary>
+            Relación: Un pedido puede tener muchos detalles
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Models.Producto">
+            <summary>
+            Representa un producto de la tienda
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Id">
+            <summary>
+            Identificador único del producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Nombre">
+            <summary>
+            Nombre del producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Descripcion">
+            <summary>
+            Descripción detallada del producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Precio">
+            <summary>
+            Precio unitario del producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Stock">
+            <summary>
+            Cantidad disponible en stock
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Marca">
+            <summary>
+            Marca del producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Talla">
+            <summary>
+            Talla del producto (ej: S, M, L, XL o número)
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.CategoriaId">
+            <summary>
+            Clave foránea: Referencia a la categoría
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.Categoria">
+            <summary>
+            Relación: Referencia a la categoría del producto
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Models.Producto.DetallePedidos">
+            <summary>
+            Relación: Un producto puede estar en muchos detalles de pedido
+            </summary>
+        </member>
+        <member name="T:Backend_tienda.Utilities.ApiResponse`1">
+            <summary>
+            Clase genérica para envolver todas las respuestas de la API
+            Proporciona una estructura consistente y predecible para el frontend
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Utilities.ApiResponse`1.Success">
+            <summary>
+            Indica si la operación fue exitosa
+            true = éxito, false = error
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Utilities.ApiResponse`1.Message">
+            <summary>
+            Mensaje descriptivo de la operación
+            Ejemplos: "Categoría creada exitosamente", "Error: El email ya existe"
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Utilities.ApiResponse`1.Data">
+            <summary>
+            Datos de la respuesta (el objeto o lista que se devuelve)
+            Es null si hay error
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Utilities.ApiResponse`1.Errors">
+            <summary>
+            Lista de errores de validación
+            Se usa cuando hay múltiples errores en los datos
+            </summary>
+        </member>
+        <member name="P:Backend_tienda.Utilities.ApiResponse`1.StatusCode">
+            <summary>
+            Código de estado HTTP
+            200=OK, 201=Created, 400=BadRequest, 404=NotFound, 500=ServerError
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.#ctor">
+            <summary>
+            Constructor vacío (para deserialización)
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.#ctor(System.Boolean,System.String,`0,System.Int32)">
+            <summary>
+            Constructor para respuestas exitosas
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.#ctor(System.Boolean,System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            Constructor para respuestas con errores
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.SuccessResponse(`0,System.String,System.Int32)">
+            <summary>
+            Crea una respuesta exitosa (GET, POST, PUT exitoso)
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.ErrorResponse(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            Crea una respuesta de error
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.NotFoundResponse(System.String)">
+            <summary>
+            Crea una respuesta de error no encontrado (404)
+            </summary>
+        </member>
+        <member name="M:Backend_tienda.Utilities.ApiResponse`1.ServerErrorResponse(System.String)">
+            <summary>
+            Crea una respuesta de error del servidor (500)
+            </summary>
+        </member>
+    </members>
+</doc>
