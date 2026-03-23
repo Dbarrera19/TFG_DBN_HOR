@@ -19,19 +19,19 @@ export const cartUtils = {
   },
 
   // Agregar producto al carrito
-  addToCart: (producto, cantidad = 1) => {
+  addToCart: (producto) => {
     const cart = cartUtils.getCart();
     const existItem = cart.find(item => item.id === producto.id);
 
     if (existItem) {
-      existItem.cantidad += cantidad;
+      existItem.cantidad += 1;
     } else {
       cart.push({
         id: producto.id,
         nombre: producto.nombre,
         precio: producto.precio,
         imagen: producto.imagen || 'https://via.placeholder.com/200',
-        cantidad: cantidad,
+        cantidad: 1,
         talla: producto.talla || '',
       });
     }

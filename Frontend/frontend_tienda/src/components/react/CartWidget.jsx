@@ -66,9 +66,9 @@ export default function CartWidget() {
 
   if (cart.length === 0) {
     return (
-      <div className="cart-empty">
+      <div class="cart-empty">
         <p>Tu carrito está vacío</p>
-        <a href="/productos" className="btn btn-primary">
+        <a href="/productos" class="btn btn-primary">
           Continuar comprando
         </a>
       </div>
