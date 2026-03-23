@@ -8,7 +8,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Actualizar cantidad del carrito
     const handleCartUpdate = () => {
       const cart = cartUtils.getCart();
       const count = cartUtils.getCartCount(cart);
@@ -17,7 +16,6 @@ export default function Header() {
 
     handleCartUpdate();
     
-    // Escuchar cambios en localStorage
     window.addEventListener('storage', handleCartUpdate);
     window.addEventListener('cartUpdated', handleCartUpdate);
 
@@ -34,8 +32,8 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="logo" onClick={handleLinkClick}>
-          <span className="logo-icon">⚽</span>
+        <Link to="/" className="logo-brand" onClick={handleLinkClick}>
+          <img src="/logo.png" alt="El Reino del Fútbol" className="logo-img" />
           <span className="logo-text">El Reino del Fútbol</span>
         </Link>
 

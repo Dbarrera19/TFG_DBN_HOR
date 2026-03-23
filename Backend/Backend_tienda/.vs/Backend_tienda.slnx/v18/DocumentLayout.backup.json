@@ -3,88 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\backend_tienda.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\backend_tienda.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\detallepedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\detallepedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\detallepedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\detallepedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\configuration\\swaggerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\configuration\\swaggerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\utilities\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\utilities\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\clientescontroller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A49A898-944C-493A-8EBE-DF86CD206168}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\clientescontroller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\types\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -133,6 +57,106 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\clientescontroller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\clientescontroller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\utilities\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\utilities\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\configuration\\swaggerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\configuration\\swaggerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\detallepedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\detallepedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\backend_tienda.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\backend_tienda.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\detallepedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\detallepedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|c:\\users\\danie\\onedrive\\escritorio\\tfg_dbn_hor\\backend\\backend_tienda\\backend_tienda\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D74956EC-E5D7-4927-3251-23B571D7AB39}|Backend_tienda\\Backend_tienda.csproj|solutionrelative:backend_tienda\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\src\\services\\categoriaService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\src\\services\\productoService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\src\\services\\clienteService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\src\\services\\pedidoService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\src\\services\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend_tienda\\src\\services\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -142,128 +166,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "App.tsx",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\App.tsx",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\App.tsx",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\App.tsx",
-              "RelativeToolTip": "Frontend_tienda\\src\\App.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:59:56.113Z",
+              "DocumentIndex": 38,
+              "Title": "api.js",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.js",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\api.js",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.js",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\api.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-23T17:45:37.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Categoria.css",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
-              "RelativeToolTip": "Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-18T19:59:48.768Z",
+              "DocumentIndex": 37,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\index.js",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\index.js",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\index.js",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-23T17:45:29.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "FormularioCategoria.tsx",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
-              "RelativeToolTip": "Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:59:31.279Z",
+              "DocumentIndex": 36,
+              "Title": "pedidoService.js",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.js",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\pedidoService.js",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.js",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\pedidoService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-23T17:45:21.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ListaCategorias.tsx",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
-              "RelativeToolTip": "Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:59:24.517Z",
+              "DocumentIndex": 35,
+              "Title": "clienteService.js",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.js",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\clienteService.js",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.js",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\clienteService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-23T17:45:11.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "pedidoService.ts",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.ts",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\pedidoService.ts",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.ts",
-              "RelativeToolTip": "Frontend_tienda\\src\\services\\pedidoService.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:59:14.112Z",
+              "DocumentIndex": 34,
+              "Title": "productoService.js",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.js",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\productoService.js",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.js",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\productoService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-23T17:45:01.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "clienteService.ts",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.ts",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\clienteService.ts",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.ts",
-              "RelativeToolTip": "Frontend_tienda\\src\\services\\clienteService.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:59:08.677Z",
+              "DocumentIndex": 33,
+              "Title": "categoriaService.js",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.js",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\categoriaService.js",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.js",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\categoriaService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-23T17:44:49.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "productoService.ts",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.ts",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\productoService.ts",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.ts",
-              "RelativeToolTip": "Frontend_tienda\\src\\services\\productoService.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:59:03.172Z",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Backend_tienda\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Backend_tienda\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T19:23:38.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "categoriaService.ts",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.ts",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\categoriaService.ts",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.ts",
-              "RelativeToolTip": "Frontend_tienda\\src\\services\\categoriaService.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:58:57.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "api.ts",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.ts",
-              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\api.ts",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.ts",
-              "RelativeToolTip": "Frontend_tienda\\src\\services\\api.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:58:51.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 2,
               "Title": "index.ts",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\types\\index.ts",
               "RelativeDocumentMoniker": "Frontend_tienda\\src\\types\\index.ts",
@@ -271,12 +269,83 @@
               "RelativeToolTip": "Frontend_tienda\\src\\types\\index.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:58:46.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:58:46.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 3,
+              "Title": "api.ts",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.ts",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\api.ts",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\api.ts",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\api.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:58:51.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "categoriaService.ts",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.ts",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\categoriaService.ts",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\categoriaService.ts",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\categoriaService.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:58:57.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "productoService.ts",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.ts",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\productoService.ts",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\productoService.ts",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\productoService.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:59:03.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clienteService.ts",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.ts",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\clienteService.ts",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\clienteService.ts",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\clienteService.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:59:08.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "pedidoService.ts",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.ts",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\services\\pedidoService.ts",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\services\\pedidoService.ts",
+              "RelativeToolTip": "Frontend_tienda\\src\\services\\pedidoService.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:59:14.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListaCategorias.tsx",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
+              "RelativeToolTip": "Frontend_tienda\\src\\components\\Categorias\\ListaCategorias.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:59:24.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ClientesController2.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Controllers\\ClientesController2.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Controllers\\ClientesController2.cs",
@@ -284,12 +353,11 @@
               "RelativeToolTip": "Backend_tienda\\Controllers\\ClientesController2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAP0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:51:16.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:51:16.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 15,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Utilities\\ApiResponse.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Utilities\\ApiResponse.cs",
@@ -297,25 +365,60 @@
               "RelativeToolTip": "Backend_tienda\\Utilities\\ApiResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:49:39.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:49:39.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Program.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Program.cs",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Program.cs",
               "RelativeToolTip": "Backend_tienda\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAUwBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T19:25:20.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 9,
+              "Title": "FormularioCategoria.tsx",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
+              "RelativeToolTip": "Frontend_tienda\\src\\components\\Categorias\\FormularioCategoria.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:59:31.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Categoria.css",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
+              "RelativeToolTip": "Frontend_tienda\\src\\components\\Categorias\\Categoria.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-18T19:59:48.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\App.tsx",
+              "RelativeDocumentMoniker": "Frontend_tienda\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\App.tsx",
+              "RelativeToolTip": "Frontend_tienda\\src\\App.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:59:56.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\README.md",
               "RelativeDocumentMoniker": "Frontend_tienda\\README.md",
@@ -323,12 +426,11 @@
               "RelativeToolTip": "Frontend_tienda\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-03-18T20:00:14.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T20:00:14.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 12,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Frontend_tienda\\src\\App.css",
               "RelativeDocumentMoniker": "Frontend_tienda\\src\\App.css",
@@ -336,12 +438,11 @@
               "RelativeToolTip": "Frontend_tienda\\src\\App.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-18T20:00:04.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T20:00:04.26Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "SwaggerConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Configuration\\SwaggerConfiguration.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Configuration\\SwaggerConfiguration.cs",
@@ -349,12 +450,11 @@
               "RelativeToolTip": "Backend_tienda\\Configuration\\SwaggerConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:44:39.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:44:39.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "PedidoDto.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\DTOs\\PedidoDto.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\DTOs\\PedidoDto.cs",
@@ -362,12 +462,11 @@
               "RelativeToolTip": "Backend_tienda\\DTOs\\PedidoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:55.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:55.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "DetallePedidoDto.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\DTOs\\DetallePedidoDto.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\DTOs\\DetallePedidoDto.cs",
@@ -375,12 +474,11 @@
               "RelativeToolTip": "Backend_tienda\\DTOs\\DetallePedidoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:52.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:52.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "ClienteDto.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\DTOs\\ClienteDto.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\DTOs\\ClienteDto.cs",
@@ -388,25 +486,24 @@
               "RelativeToolTip": "Backend_tienda\\DTOs\\ClienteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:48.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:48.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "ProductoDto.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\DTOs\\ProductoDto.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\DTOs\\ProductoDto.cs",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\DTOs\\ProductoDto.cs",
               "RelativeToolTip": "Backend_tienda\\DTOs\\ProductoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAEBTwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T19:23:44.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 21,
               "Title": "CategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\DTOs\\CategoriaDto.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\DTOs\\CategoriaDto.cs",
@@ -414,25 +511,11 @@
               "RelativeToolTip": "Backend_tienda\\DTOs\\CategoriaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:41.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:41.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Backend_tienda\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Backend_tienda\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAABBwHsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:38.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "DetallePedido.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Models\\DetallePedido.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Models\\DetallePedido.cs",
@@ -440,12 +523,11 @@
               "RelativeToolTip": "Backend_tienda\\Models\\DetallePedido.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:29.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:29.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 23,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Models\\Pedido.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Models\\Pedido.cs",
@@ -453,12 +535,11 @@
               "RelativeToolTip": "Backend_tienda\\Models\\Pedido.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:25.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:25.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 24,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Models\\Cliente.cs",
@@ -466,25 +547,24 @@
               "RelativeToolTip": "Backend_tienda\\Models\\Cliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:21.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:21.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 25,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Models\\Producto.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Models\\Producto.cs",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Models\\Producto.cs",
               "RelativeToolTip": "Backend_tienda\\Models\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBHwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T19:23:18.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 26,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Models\\Categoria.cs",
@@ -492,25 +572,23 @@
               "RelativeToolTip": "Backend_tienda\\Models\\Categoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:23:12.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:12.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Backend_tienda",
+              "DocumentIndex": 27,
+              "Title": "Backend_tienda.csproj",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Backend_tienda.csproj",
               "RelativeDocumentMoniker": "Backend_tienda\\Backend_tienda.csproj",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Backend_tienda.csproj",
               "RelativeToolTip": "Backend_tienda\\Backend_tienda.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-18T19:22:55.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:22:55.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 28,
               "Title": "DetallepedidosController.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Controllers\\DetallepedidosController.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Controllers\\DetallepedidosController.cs",
@@ -518,12 +596,11 @@
               "RelativeToolTip": "Backend_tienda\\Controllers\\DetallepedidosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:25:15.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:25:15.074Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 29,
               "Title": "PedidosController.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Controllers\\PedidosController.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Controllers\\PedidosController.cs",
@@ -531,25 +608,24 @@
               "RelativeToolTip": "Backend_tienda\\Controllers\\PedidosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwD4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:25:00.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:25:00.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 30,
               "Title": "ProductosController.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Controllers\\ProductosController.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Controllers\\ProductosController.cs",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Controllers\\ProductosController.cs",
               "RelativeToolTip": "Backend_tienda\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAIBJwCUBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAPIAAAAAAAAAAABBwDABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T19:24:25.921Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 31,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "Backend_tienda\\Controllers\\CategoriasController.cs",
@@ -557,12 +633,11 @@
               "RelativeToolTip": "Backend_tienda\\Controllers\\CategoriasController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAABRwN4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T19:24:10.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:24:10.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 32,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Escritorio\\TFG_DBN_HOR\\Backend\\Backend_tienda\\Backend_tienda\\appsettings.json",
               "RelativeDocumentMoniker": "Backend_tienda\\appsettings.json",
@@ -570,8 +645,7 @@
               "RelativeToolTip": "Backend_tienda\\appsettings.json",
               "ViewState": "AgIAAAIAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-18T19:23:02.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T19:23:02.268Z"
             }
           ]
         }

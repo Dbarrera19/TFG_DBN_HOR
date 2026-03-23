@@ -1,6 +1,6 @@
 import { apiGet, apiPost, apiPut, apiDelete } from './api.js';
 
-// ============ CATEGORÍAS ============
+
 export function getCategorias() {
   return apiGet('/categorias');
 }
@@ -21,7 +21,6 @@ export function deleteCategoria(id) {
   return apiDelete(`/categorias/${id}`);
 }
 
-// ============ PRODUCTOS ============
 export function getProductos() {
   return apiGet('/productos');
 }
@@ -42,7 +41,6 @@ export function deleteProducto(id) {
   return apiDelete(`/productos/${id}`);
 }
 
-// ============ CLIENTES ============
 export function getClientes() {
   return apiGet('/clientes');
 }
@@ -63,7 +61,6 @@ export function deleteCliente(id) {
   return apiDelete(`/clientes/${id}`);
 }
 
-// ============ PEDIDOS ============
 export function getPedidos() {
   return apiGet('/pedidos');
 }
@@ -84,7 +81,7 @@ export function deletePedido(id) {
   return apiDelete(`/pedidos/${id}`);
 }
 
-// ============ DETALLES DE PEDIDOS ============
+
 export function getDetallesPedido() {
   return apiGet('/detallepedidos');
 }

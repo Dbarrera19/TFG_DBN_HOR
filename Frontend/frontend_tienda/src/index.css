@@ -1,20 +1,26 @@
 /* ============== VARIABLES GLOBALES ============== */
+/* Paleta Premium inspirada en el logo "El Reino del Fútbol" */
 :root {
-  --primary-color: #1f472a;
-  --secondary-color: #2d5e3f;
-  --accent-color: #f39c12;
-  --accent-light: #ffc107;
-  --text-dark: #2c3e50;
-  --text-light: #34495e;
-  --bg-light: #f8f9fa;
+  --primary-color: #0D47A1;         /* Azul Premium Profundo */
+  --primary-light: #1E5BA8;         /* Azul Real - Botones */
+  --secondary-color: #1565C0;       /* Azul Secundario */
+  --accent-color: #FFD700;          /* Oro - Detalles */
+  --accent-dark: #FFC107;           /* Oro Oscuro - Hover */
+  --accent-light: #FFF9E6;          /* Oro muy claro - Fondos */
+  --text-dark: #0D1117;             /* Negro profundo */
+  --text-light: #586069;            /* Gris medio */
+  --text-muted: #6A737D;            /* Gris claro */
+  --bg-light: #F6F8FB;              /* Azul muy claro */
   --bg-white: #ffffff;
-  --border-color: #e0e0e0;
-  --success-color: #27ae60;
-  --danger-color: #e74c3c;
-  --warning-color: #f39c12;
-  --radius: 8px;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --border-color: #DDE4EE;          /* Azul gris claro */
+  --success-color: #1D7E49;
+  --danger-color: #D1242F;
+  --warning-color: #FFD700;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(13, 71, 161, 0.08);
+  --shadow-lg: 0 8px 24px rgba(13, 71, 161, 0.15);
+  --shadow-xl: 0 16px 40px rgba(13, 71, 161, 0.2);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============== ESTILOS BASE ============== */

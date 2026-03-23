@@ -1,0 +1,58 @@
+﻿namespace Backend_tienda.Models
+{
+    /// <summary>
+    /// Representa un producto de la tienda
+    /// </summary>
+    public class Producto
+    {
+        /// <summary>
+        /// Identificador único del producto
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Nombre del producto
+        /// </summary>
+        public string Nombre { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Descripción detallada del producto
+        /// </summary>
+        public string Descripcion { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Precio unitario del producto
+        /// </summary>
+        public decimal Precio { get; set; }
+
+        /// <summary>
+        /// Cantidad disponible en stock
+        /// </summary>
+        public int Stock { get; set; }
+
+        /// <summary>
+        /// Marca del producto
+        /// </summary>
+        public string Marca { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Talla del producto (ej: S, M, L, XL o número)
+        /// </summary>
+        public string Talla { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Clave foránea: Referencia a la categoría (nullable - la categoría es opcional)
+        /// </summary>
+        public int? CategoriaId { get; set; }
+
+        /// <summary>
+        /// Relación: Referencia a la categoría del producto
+        /// </summary>
+        public Categoria? Categoria { get; set; }
+
+        /// <summary>
+        /// Relación: Un producto puede estar en muchos detalles de pedido
+        /// </summary>
+        public ICollection<DetallePedido> DetallePedidos { get; set; } = new List<DetallePedido>();
+    }
+}

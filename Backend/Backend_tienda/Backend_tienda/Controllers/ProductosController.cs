@@ -35,20 +35,21 @@ namespace Backend_tienda.Controllers
             try
             {
                 var productos = await _context.Productos
+                    .AsNoTracking()
                     .Include(p => p.Categoria)
                     .ToListAsync();
 
                 var productosDto = productos.Select(p => new ProductoDto
                 {
                     Id = p.Id,
-                    Nombre = p.Nombre,
-                    Descripcion = p.Descripcion,
+                    Nombre = p.Nombre ?? string.Empty,
+                    Descripcion = p.Descripcion ?? string.Empty,
                     Precio = p.Precio,
                     Stock = p.Stock,
-                    Marca = p.Marca,
-                    Talla = p.Talla,
+                    Marca = p.Marca ?? string.Empty,
+                    Talla = p.Talla ?? string.Empty,
                     CategoriaId = p.CategoriaId,
-                    CategoriaNombre = p.Categoria?.Nombre
+                    CategoriaNombre = p.Categoria?.Nombre ?? "Sin categoría"
                 }).ToList();
 
                 return Ok(ApiResponse<IEnumerable<ProductoDto>>.SuccessResponse(
@@ -59,6 +60,7 @@ namespace Backend_tienda.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Error al obtener productos: {ex.Message}");
+                _logger.LogError($"Stack trace: {ex.StackTrace}");
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     ApiResponse<IEnumerable<ProductoDto>>.ServerErrorResponse("Error al obtener los productos"));
             }
@@ -76,6 +78,7 @@ namespace Backend_tienda.Controllers
             try
             {
                 var producto = await _context.Productos
+                    .AsNoTracking()
                     .Include(p => p.Categoria)
                     .FirstOrDefaultAsync(p => p.Id == id);
 
@@ -85,14 +88,14 @@ namespace Backend_tienda.Controllers
                 var productoDto = new ProductoDto
                 {
                     Id = producto.Id,
-                    Nombre = producto.Nombre,
-                    Descripcion = producto.Descripcion,
+                    Nombre = producto.Nombre ?? string.Empty,
+                    Descripcion = producto.Descripcion ?? string.Empty,
                     Precio = producto.Precio,
                     Stock = producto.Stock,
-                    Marca = producto.Marca,
-                    Talla = producto.Talla,
+                    Marca = producto.Marca ?? string.Empty,
+                    Talla = producto.Talla ?? string.Empty,
                     CategoriaId = producto.CategoriaId,
-                    CategoriaNombre = producto.Categoria?.Nombre
+                    CategoriaNombre = producto.Categoria?.Nombre ?? "Sin categoría"
                 };
 
                 return Ok(ApiResponse<ProductoDto>.SuccessResponse(productoDto, "Producto obtenido correctamente"));
@@ -100,6 +103,7 @@ namespace Backend_tienda.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Error al obtener producto: {ex.Message}");
+                _logger.LogError($"Stack trace: {ex.StackTrace}");
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     ApiResponse<ProductoDto>.ServerErrorResponse("Error al obtener el producto"));
             }
@@ -131,12 +135,15 @@ namespace Backend_tienda.Controllers
                 if (errores.Count > 0)
                     return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Datos inválidos", errores, 400));
 
-                // Verificar que la categoría existe
-                var categoriaExiste = await _context.Categorias.AnyAsync(c => c.Id == dto.CategoriaId);
-                if (!categoriaExiste)
+                // Verificar que la categoría existe (solo si se proporciona)
+                if (dto.CategoriaId.HasValue)
                 {
-                    errores.Add("La categoría especificada no existe");
-                    return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Categoría no válida", errores, 400));
+                    var categoriaExiste = await _context.Categorias.AnyAsync(c => c.Id == dto.CategoriaId);
+                    if (!categoriaExiste)
+                    {
+                        errores.Add("La categoría especificada no existe");
+                        return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Categoría no válida", errores, 400));
+                    }
                 }
 
                 var producto = new Producto
@@ -153,7 +160,7 @@ namespace Backend_tienda.Controllers
                 _context.Productos.Add(producto);
                 await _context.SaveChangesAsync();
 
-                var categoria = await _context.Categorias.FindAsync(dto.CategoriaId);
+                var categoria = dto.CategoriaId.HasValue ? await _context.Categorias.FindAsync(dto.CategoriaId.Value) : null;
 
                 var productoDto = new ProductoDto
                 {
@@ -211,11 +218,15 @@ namespace Backend_tienda.Controllers
                 if (producto == null)
                     return NotFound(ApiResponse<ProductoDto>.NotFoundResponse("Producto no encontrado"));
 
-                var categoriaExiste = await _context.Categorias.AnyAsync(c => c.Id == dto.CategoriaId);
-                if (!categoriaExiste)
+                // Verificar que la categoría existe (solo si se proporciona)
+                if (dto.CategoriaId.HasValue)
                 {
-                    errores.Add("La categoría especificada no existe");
-                    return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Categoría no válida", errores, 400));
+                    var categoriaExiste = await _context.Categorias.AnyAsync(c => c.Id == dto.CategoriaId);
+                    if (!categoriaExiste)
+                    {
+                        errores.Add("La categoría especificada no existe");
+                        return BadRequest(ApiResponse<ProductoDto>.ErrorResponse("Categoría no válida", errores, 400));
+                    }
                 }
 
                 producto.Nombre = dto.Nombre;
@@ -229,7 +240,7 @@ namespace Backend_tienda.Controllers
                 _context.Productos.Update(producto);
                 await _context.SaveChangesAsync();
 
-                var categoria = await _context.Categorias.FindAsync(dto.CategoriaId);
+                var categoria = producto.CategoriaId.HasValue ? await _context.Categorias.FindAsync(producto.CategoriaId.Value) : null;
 
                 var productoDto = new ProductoDto
                 {

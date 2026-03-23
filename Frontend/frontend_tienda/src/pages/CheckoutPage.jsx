@@ -65,7 +65,6 @@ export default function CheckoutPage() {
       setIsSubmitting(true);
       setError('');
 
-      // Preparar detalles del pedido
       const detalles = cart.map(item => ({
         productoId: item.id,
         cantidad: item.cantidad,
@@ -76,17 +75,13 @@ export default function CheckoutPage() {
         detalles: detalles,
       };
 
-      // Crear el pedido
       const pedido = await pedidosService.create(pedidoData);
 
-      // Limpiar carrito
       cartUtils.clearCart();
       window.dispatchEvent(new Event('cartUpdated'));
 
-      // Mostrar mensaje de éxito
       setSuccessMessage('✅ ¡Pedido creado exitosamente!');
 
-      // Redirigir a confirmación después de 2 segundos
       setTimeout(() => {
         navigate(`/confirmacion-pedido/${pedido.id}`);
       }, 2000);

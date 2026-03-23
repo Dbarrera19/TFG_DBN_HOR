@@ -19,19 +19,19 @@ export const cartUtils = {
   },
 
   // Agregar producto al carrito
-  addToCart: (producto) => {
+  addToCart: (producto, cantidad = 1) => {
     const cart = cartUtils.getCart();
     const existItem = cart.find(item => item.id === producto.id);
 
     if (existItem) {
-      existItem.cantidad += 1;
+      existItem.cantidad += cantidad;
     } else {
       cart.push({
         id: producto.id,
         nombre: producto.nombre,
         precio: producto.precio,
         imagen: producto.imagen || 'https://via.placeholder.com/200',
-        cantidad: 1,
+        cantidad: cantidad,
         talla: producto.talla || '',
       });
     }
@@ -88,7 +88,7 @@ export const cartUtils = {
   },
 };
 
-// Utilidades de formato
+// Formateo de datos
 export const formatUtils = {
   formatPrice: (price) => {
     return new Intl.NumberFormat('es-ES', {

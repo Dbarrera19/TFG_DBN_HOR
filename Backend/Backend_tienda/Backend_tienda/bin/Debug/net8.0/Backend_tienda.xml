@@ -441,7 +441,7 @@
         </member>
         <member name="P:Backend_tienda.Models.Producto.CategoriaId">
             <summary>
-            Clave foránea: Referencia a la categoría
+            Clave foránea: Referencia a la categoría (nullable - la categoría es opcional)
             </summary>
         </member>
         <member name="P:Backend_tienda.Models.Producto.Categoria">

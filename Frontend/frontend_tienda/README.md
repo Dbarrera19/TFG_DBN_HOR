@@ -19,7 +19,7 @@ Frontend completo de una tienda online de equipación deportiva desarrollado con
 ### Requisitos
 - Node.js 16+
 - npm o yarn
-- Backend ejecutándose en `https://localhost:7001`
+- Backend ejecutándose en `https://localhost:7246`
 
 ### Pasos
 
@@ -97,7 +97,7 @@ frontend_tienda/
 
 La API está configurada en `src/services/api.js`:
 ```javascript
-const API_BASE_URL = 'https://localhost:7001/api';
+const API_BASE_URL = 'https://localhost:7246/api';
 ```
 
 ### Servicios Disponibles

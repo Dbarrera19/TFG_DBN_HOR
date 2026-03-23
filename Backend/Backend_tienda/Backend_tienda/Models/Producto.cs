@@ -13,12 +13,12 @@ namespace Backend_tienda.Models
         /// <summary>
         /// Nombre del producto
         /// </summary>
-        public string Nombre { get; set; } = string.Empty;
+        public string? Nombre { get; set; }
 
         /// <summary>
         /// Descripción detallada del producto
         /// </summary>
-        public string Descripcion { get; set; } = string.Empty;
+        public string? Descripcion { get; set; }
 
         /// <summary>
         /// Precio unitario del producto
@@ -33,17 +33,17 @@ namespace Backend_tienda.Models
         /// <summary>
         /// Marca del producto
         /// </summary>
-        public string Marca { get; set; } = string.Empty;
+        public string? Marca { get; set; }
 
         /// <summary>
         /// Talla del producto (ej: S, M, L, XL o número)
         /// </summary>
-        public string Talla { get; set; } = string.Empty;
+        public string? Talla { get; set; }
 
         /// <summary>
-        /// Clave foránea: Referencia a la categoría
+        /// Clave foránea: Referencia a la categoría (nullable - la categoría es opcional)
         /// </summary>
-        public int CategoriaId { get; set; }
+        public int? CategoriaId { get; set; }
 
         /// <summary>
         /// Relación: Referencia a la categoría del producto

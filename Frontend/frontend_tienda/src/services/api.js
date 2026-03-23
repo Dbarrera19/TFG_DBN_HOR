@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://localhost:7001/api';
+const API_BASE_URL = 'https://localhost:7246/api';
 
 /**
  * Parsea la respuesta de la API
@@ -27,15 +27,29 @@ export async function apiCall(endpoint, options = {}) {
     const response = await fetch(url, config);
     const data = await response.json();
 
+    console.log('API Response:', url, data); // Depuración
+
     // Validar estructura de respuesta
-    if (!data.success) {
+    // Si data.success existe, validarlo
+    if (data.success !== undefined && !data.success) {
       const error = new Error(data.message || 'Error en la API');
       error.apiErrors = data.errors || [];
       error.statusCode = data.statusCode || response.status;
       throw error;
     }
 
-    return data.data; // La información útil está dentro de data.data
+    // Si tiene estructura {success, data, ...}, retornar data.data
+    if (data.success !== undefined && data.data !== undefined) {
+      return data.data;
+    }
+
+    // Si es un array directo, retornarlo
+    if (Array.isArray(data)) {
+      return data;
+    }
+
+    // Si es un objeto con success, retornarlo
+    return data;
   } catch (error) {
     console.error('API Error:', error);
     throw error;
@@ -43,15 +57,12 @@ export async function apiCall(endpoint, options = {}) {
 }
 
 /**
- * GET request
+ * Solicitud GET
  */
 export function apiGet(endpoint) {
   return apiCall(endpoint, { method: 'GET' });
 }
 
-/**
- * POST request
- */
 export function apiPost(endpoint, body) {
   return apiCall(endpoint, {
     method: 'POST',
@@ -59,9 +70,6 @@ export function apiPost(endpoint, body) {
   });
 }
 
-/**
- * PUT request
- */
 export function apiPut(endpoint, body) {
   return apiCall(endpoint, {
     method: 'PUT',
@@ -69,16 +77,12 @@ export function apiPut(endpoint, body) {
   });
 }
 
-/**
- * DELETE request
- */
 export function apiDelete(endpoint) {
   return apiCall(endpoint, { method: 'DELETE' });
 }
 
-// ============= SERVICIOS ESPECÍFICOS =============
+// ============= SERVICIOS =============
 
-// Servicio de Categorías
 export const categoriasService = {
   getAll: () => apiGet('/categorias'),
   getById: (id) => apiGet(`/categorias/${id}`),
@@ -87,7 +91,6 @@ export const categoriasService = {
   delete: (id) => apiDelete(`/categorias/${id}`),
 };
 
-// Servicio de Productos
 export const productosService = {
   getAll: () => apiGet('/productos'),
   getById: (id) => apiGet(`/productos/${id}`),
@@ -96,7 +99,6 @@ export const productosService = {
   delete: (id) => apiDelete(`/productos/${id}`),
 };
 
-// Servicio de Clientes
 export const clientesService = {
   getAll: () => apiGet('/clientes'),
   getById: (id) => apiGet(`/clientes/${id}`),
@@ -105,7 +107,6 @@ export const clientesService = {
   delete: (id) => apiDelete(`/clientes/${id}`),
 };
 
-// Servicio de Pedidos
 export const pedidosService = {
   getAll: () => apiGet('/pedidos'),
   getById: (id) => apiGet(`/pedidos/${id}`),
@@ -114,7 +115,7 @@ export const pedidosService = {
   delete: (id) => apiDelete(`/pedidos/${id}`),
 };
 
-// Servicio de Detalles de Pedidos
+
 export const detallepedidosService = {
   getAll: () => apiGet('/detallepedidos'),
   getById: (id) => apiGet(`/detallepedidos/${id}`),

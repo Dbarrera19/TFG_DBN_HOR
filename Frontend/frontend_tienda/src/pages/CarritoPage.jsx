@@ -7,7 +7,6 @@ export default function CarritoPage() {
 
   useEffect(() => {
     actualizarCarrito();
-    // Escuchar cambios en el carrito
     window.addEventListener('cartUpdated', actualizarCarrito);
     return () => window.removeEventListener('cartUpdated', actualizarCarrito);
   }, []);

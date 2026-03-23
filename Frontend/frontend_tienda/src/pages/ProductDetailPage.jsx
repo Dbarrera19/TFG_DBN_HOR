@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { LoadingSpinner, ErrorMessage } from '../components/LoadingStates';
 import { productosService } from '../services/api';
-import { cartUtils, formatUtils } from '../utils/index';
+import { cartUtils } from '../utils/index';
 
 export default function ProductDetailPage() {
   const { id } = useParams();
@@ -29,9 +29,7 @@ export default function ProductDetailPage() {
 
   const handleAddToCart = () => {
     if (!producto) return;
-    for (let i = 0; i < cantidad; i++) {
-      cartUtils.addToCart(producto);
-    }
+    cartUtils.addToCart(producto, cantidad);
     window.dispatchEvent(new Event('cartUpdated'));
     alert(`✅ ${cantidad} producto(s) agregado(s) al carrito`);
     setCantidad(1);
@@ -65,8 +63,7 @@ export default function ProductDetailPage() {
               maxWidth: '100%',
               height: 'auto',
               borderRadius: '8px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              onError: (e) => { e.target.src = 'https://via.placeholder.com/400x400?text=No+imagen'; }
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
             }}
             onError={(e) => { e.target.src = 'https://via.placeholder.com/400x400?text=No+imagen'; }}
           />

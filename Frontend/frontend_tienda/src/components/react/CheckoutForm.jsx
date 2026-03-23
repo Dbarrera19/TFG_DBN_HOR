@@ -63,7 +63,6 @@ export default function CheckoutForm() {
 
       let clienteId = selectedClienteId;
 
-      // Crear cliente si es necesario
       if (selectMode === 'new') {
         if (!newCliente.nombre || !newCliente.email || !newCliente.telefono) {
           setError('Por favor rellena todos los campos del cliente');
@@ -75,7 +74,6 @@ export default function CheckoutForm() {
         clienteId = clienteResponse.id;
       }
 
-      // Crear pedido
       const detalles = cart.map(item => ({
         productoId: item.id,
         cantidad: item.cantidad
@@ -91,11 +89,9 @@ export default function CheckoutForm() {
       setSuccess(true);
       setPedidoId(response.id);
       
-      // Limpiar carrito y redirigir
       clearCart();
       window.dispatchEvent(new Event('cartUpdated'));
 
-      // Redirigir a confirmación después de 2 segundos
       setTimeout(() => {
         window.location.href = `/pedido-confirmacion?id=${response.id}`;
       }, 2000);

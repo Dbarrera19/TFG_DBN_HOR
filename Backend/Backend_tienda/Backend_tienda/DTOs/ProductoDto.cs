@@ -8,7 +8,7 @@ namespace Backend_tienda.DTOs
         public int Stock { get; set; }
         public string Marca { get; set; } = string.Empty;
         public string Talla { get; set; } = string.Empty;
-        public int CategoriaId { get; set; }
+        public int? CategoriaId { get; set; } // Nullable: la categoría es opcional
     }
 
     public class ProductoDto
@@ -20,7 +20,7 @@ namespace Backend_tienda.DTOs
         public int Stock { get; set; }
         public string Marca { get; set; } = string.Empty;
         public string Talla { get; set; } = string.Empty;
-        public int CategoriaId { get; set; }
+        public int? CategoriaId { get; set; } // Nullable: la categoría es opcional
         public string? CategoriaNombre { get; set; } // Información adicional
     }
 }

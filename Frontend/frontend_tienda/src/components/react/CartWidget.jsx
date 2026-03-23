@@ -13,7 +13,6 @@ export default function CartWidget() {
     setCart(savedCart);
     calculateTotal(savedCart);
 
-    // Escuchar cambios de localStorage
     const handleStorageChange = () => {
       const updated = getCart();
       setCart(updated);
@@ -40,7 +39,7 @@ export default function CartWidget() {
     setCart(updated);
     calculateTotal(updated);
     
-    // Disparar evento para actualizar el header
+
     window.dispatchEvent(new Event('cartUpdated'));
   };
 
@@ -67,9 +66,9 @@ export default function CartWidget() {
 
   if (cart.length === 0) {
     return (
-      <div class="cart-empty">
+      <div className="cart-empty">
         <p>Tu carrito está vacío</p>
-        <a href="/productos" class="btn btn-primary">
+        <a href="/productos" className="btn btn-primary">
           Continuar comprando
         </a>
       </div>

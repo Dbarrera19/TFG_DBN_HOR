@@ -41,12 +41,10 @@ export default function ProductosPage() {
   const filtrarProductos = () => {
     let filtered = [...productos];
 
-    // Filtrar por categoría
     if (selectedCategory) {
       filtered = filtered.filter(p => p.categoriaId === parseInt(selectedCategory));
     }
 
-    // Filtrar por búsqueda
     if (searchTerm) {
       const search = searchTerm.toLowerCase();
       filtered = filtered.filter(p =>
